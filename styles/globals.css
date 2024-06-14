@@ -1,217 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.rubik {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
-body{
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+
+  font-family: Rubik 'sans-serif';
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  /* color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb)); */
+
+  /* background: radial-gradient(46.83% 46.83% at 50% 53.17%, rgba(3, 53, 103, 0.59) 0%, #000000 100%); */
+}
+
+.background-main {
+  /* background: radial-gradient(46.83% 46.83% at 50% 53.17%, rgba(3, 53, 103, 0.59) 0%, #000000 100%);  */
   background: linear-gradient(to right, #000000, #011932)
 }
 
-nav{
-  width: 100%;
-  background-color: #000;
-  padding: 4px 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 10;
-}
-.logo{
-  width: 120px;
-}
-nav ul li{
-  display: inline-block;
-  list-style: none;
-  margin: 5px 20px;
-  font-size: 16px;
-  color: aliceblue;
-}
-a{
-  text-decoration: none;
-  color: inherit;
-  line-height: 1;
-  cursor: pointer;
-}
-.container{
-  width: 100%;
-  padding-left: 10%;
-  padding-right: 10%;
-}
-.hero-text h1{
-  color: aliceblue;
-  height: 150px;
-  font-size: 50px;
-}
-.hero-text p{
-  color: aliceblue;
-  padding-top: 20px;
-}
-.hero{
-  width: 100%;
-  height: 68vh;
-  padding-top: 10%;
-  padding-left: 13%;
- 
-}
-.hero-text{
-  height: 450px;
-  text-align: left;
-  max-width: 350px;
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 }
 
-.hero-text img{
- width: 80px;
-}
-.hero-text .btn2{
-  width: 350px;
-  background: linear-gradient(to right, #013b72, #0162be);
-  color: #fdfcfc;
-  padding: 14px 25px;
-  font-size: 18px;
-  border-radius: 10px;
-  cursor: pointer;
-  border: 0;
-  outline: 0;
-}
-
-.hero-text .btn3{
-  width: 350px;
-  background: white;
-  color: #2041ac;
-  padding: 14px 25px;
-  font-size: 18px;
-  border-radius: 10px;
-  cursor: pointer;
-  border: 0;
-  outline: 0;
-}
-
-.foot p{
-  color: aliceblue;
-  padding-left: 13%;
-  font-size: 13px;
-  font-family: sans-serif;
-
-}
-.office{
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content:space-between;
-  height: 10vh;
-  padding-left: 10%;
-}
-.office ul li{
-  display: inline-block;
-  list-style: none;
-  margin: 10px 50px;
-  padding-top: 12px;
-color: aliceblue;
-}
-
-.testimonials{
-  margin: 80px auto;
-  padding: 0 80px;
+.main {
   position: relative;
+  height: 100vh;
+  /* overflow: hidden; */
 }
 
-.next-btn, .back-btn{
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  padding: 15px;
-  width: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-  background: #fdfcfc;
+.whatsapp {
+  position: fixed;
+  bottom: 60px;
+  right: 60px;
 }
- .back-btn{
-  right:auto;
-  left: 0;
- }
- .slider{
-  overflow: hidden;
- }
- .slider ul{
+
+
+.upper-deck{
+  background-color: #002147;
+  color: rgba(255, 255, 255, 1);
+  height: 48px;
+  /* height: 48px; */
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 12px 0;
   display: flex;
-  width: 200%;
-  overflow-x: hidden;
-  transition: 0.5s;
- }
- .slider ul li{
-  list-style: none;
-  width: 50%;
-  padding: 20px;
- }
-
- .slide{
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-  padding: 40px;
-  border-radius: 10px;
-  color: #676767;
-  line-height: 1.4;
- }
-
- .slide img{
-  width: 65px;
-  border-radius: 50%;
-  margin-right: 10px;
-  border: 4px solid #212EA0;
- }
-
- .user-info{
-  display: flex;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
-  font-size: 15px;
- }
-
- .user-info h3{
+  gap: 10px;
+}
+.upper-deck-button{
+  /* border-color: white; */
   color: white;
- }
+  border-radius: 10px;
+  border: 1.5px solid #FFFFFF;
+  width: 100px;
+  height: 30px;
+}
 
- /* ----media query---- */
+.upper-deck-button:hover {
+  background-color: #323d6b;
+}
 
- @media (max-width:1200px){
-  .container{
-    padding-left: 5%;
-    padding-right: 5%;
+@media only screen and (max-width: 600px) {
+  .upper-deck {
+    height: 2.5rem; /* Adjust height for mobile */
+    padding: 0 1rem;
+    font-size: 12px;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    /* width: 270; */
   }
- }
 
- @media (max-width: 1000px){
-  .logo{
-    width: 140px;
+  .upper-deck-button {
+    width: 80px; /* Adjust width for mobile */
+    height: 25px; /* Adjust height for mobile */
+    font-size: 0.8rem; /* Adjust font size for better readability */
   }
-  nav ul li{
-    margin: 10px 15px;
-  }
- }
 
- @media (max-width: 1410px){
-  nav{
-    padding: 15px 0;
+  .whatsapp {
+    right: 24px;
   }
-  nav ul{
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background: #212EA0;
-    z-index: -1;
-    width: 200px;
-    padding-top: 70px;
-    transition: 0.5s;
-    }
-    nav ul li{
-     display: block;
-     margin: 25px 40px;
-    }
- }
+}
 
+
+.slick-slider {
+  position: relative !important;
+}
+
+.slick-slider::before,
+.slick-slider::after {
+  content: '';
+  position: absolute !important;
+  left: 0;
+  right: 0;
+  height: 20px; /* Adjust the height to your preference */
+  z-index: 1; /* Ensure it appears above the slider content */
+  pointer-events: none; /* Ensure it doesn't interfere with slide interactions */
+}
+
+.slick-slider::before {
+  top: 0;
+  box-shadow: 0 10px 10px 50px linear-gradient(to right, #000000, #011932) inset; /* Adjust the shadow to your preference */
+}
+
+.slick-slider::after {
+  bottom: 0;
+  box-shadow: 0 -10px 10px 50px linear-gradient(to right, #000000, #011932) inset; /* Adjust the shadow to your preference */
+}

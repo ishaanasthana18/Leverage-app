@@ -1,0 +1,300 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 48px;
+  margin-left: 156px;
+  margin-top: 48px;
+  padding: 16px;
+  color: rgba(255, 255, 255, 0.88);
+  position: relative;
+}
+
+.left {
+  min-width: 340px;
+  max-width: 360px;
+}
+
+.heading {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 64px;
+}
+
+.description {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 20px 0;
+  color: #FFFFFF;
+}
+
+.liveOn {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin: 20px 0;
+  gap: 10px;
+}
+.company{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+  max-width: 370px;
+  object-fit: contain;
+  /* gap: 20px; */
+}
+.company img {
+  height: 30px;
+  margin-right: 10px;
+  
+}
+
+.liveOn img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  /* width: 100%; */
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.btnBlue {
+  padding: 15px;
+  text-align: center;
+  /* width: 100%; */
+  text-decoration: none;
+  border-radius: 15px;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(90deg, #002147 0%, #0487F3 100%);
+}
+
+.btnBlue:hover {
+  background: linear-gradient(90deg, #002147 0%, #2271b3 100%);
+}
+
+.btnWhite {
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 15px;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+}
+
+.footerText1 {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 16px;
+}
+
+.footerText2 {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 40px;
+}
+
+.carouselContainer {
+  width: 77%;
+  padding-top: 8px;
+  height: 540px;
+  overflow: hidden;
+  overflow-x: hidden;
+}
+
+.carouselItem {
+  padding: 0; /* Remove padding */
+  height: 540px; /* Ensure items fill the container height */
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+}
+
+.carouselItem img {
+  /* max-width: 100%; */
+  /* max-height: 100%; */
+  height: 540px;
+  object-fit: cover;
+  /* border-radius: 10px; */
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+
+.carouselItem img:hover {
+  transform: scale(1.5);
+  z-index: 1000;
+  position: relative;
+}
+
+.reactSlickPrevButton {
+  position: absolute;
+  right: 360px;
+  left: unset;
+  top: -83px;
+  height: 64px;
+  width: 64px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1.5px solid #0487F3;
+  color: #0487F3;
+}
+
+.reactSlickPrevButton::before {
+  content: none;
+}
+
+.reactSlickPrevButton:hover {
+  background: #0487F3;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+
+.reactSlickNextButton {
+  position: absolute;
+  right: 288px;
+  left: unset;
+  top: -83px;
+  height: 48px;
+  width: 48px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1.5px solid #0487F3;
+  color: #0487F3;
+
+}
+
+.reactSlickNextButton::before {
+  content: none;
+}
+
+.reactSlickNextButton:hover {
+  background: #0487F3;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.arrow {
+  /* color: white;
+  background-color: rgba(255,255,255, 0.4);
+  border-radius: 50%;
+  width: 64px;
+  position: absolute;
+  z-index: 9999;
+  top: 35%; */
+  display: none;
+}
+
+.arrowRight {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.46);
+  border: 2px solid rgba(139, 137, 137, 1);
+  border-radius: 50%;
+  width: 64px;
+  position: absolute;
+  z-index: 9999;
+  top: 45%;
+  right: 24px;
+  cursor: pointer;
+}
+
+.arrowRight:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    background: linear-gradient(to right, #000000, #011932);
+  }
+
+  .carouselContainer {
+    width: 100%;
+    height: 400px; /* Adjusted height for smaller screens */
+  }
+
+  .container {
+    display: flex;
+    flex-direction:column-reverse;
+    
+    justify-content: space-around;
+    gap: 48px;
+    margin-left: 0;
+    margin-top: 0;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.88);
+  }
+
+  .arrowRight {
+    /* top: 30%; */
+    display: none;
+    /* right: 40%; */
+  }
+
+  .carouselContainer {
+    height: 370px;
+  }
+
+  .carouselItem {
+    height: 370px;
+  }
+
+  .carouselItem img {
+    height: 370px;
+  }
+}
+
+@media (max-width: 600px) {
+  .heading {
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+  }
+
+  .footerText1 {
+    margin-top: 24px;
+    text-align: center;
+  }
+
+  .footerText2 {
+    margin-top: 24px;
+    text-align: center;
+  }
+  .left {
+    padding: 24px;
+    max-width: 450px;
+  }
+
+  .liveOn {
+    display: flex;
+    justify-content: center;
+  }
+
+  .carouselItem img:hover {
+    transform: scale(1.2);
+  }
+}
