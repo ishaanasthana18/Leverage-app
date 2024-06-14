@@ -22,9 +22,24 @@ Slider.current.style.transform = 'translateX(${tx}%';
 
 return (
   <div className="'testimonials">
-    <img src="nexticon.png" alt="" className='next-btn'/>
-    <img src="" alt="" className='naxt-btn'/>
-    <div className="slider"></div>
+    <img src="nexticon.png" alt="" className='next-btn' onClick={slideForward}/>
+    <img src="back.jpg" alt="" className='naxt-btn' onClick={slideBackward}/>
+    <div className="slider">
+      <ul>
+        <li>
+          <div className="slide">
+            <div className="user-info">
+              <img src="dowlnoad1.jpeg" alt=""/>
+              <div>
+                <h3>
+                  hi my name is ishaan
+                </h3>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 )
 
@@ -47,7 +62,9 @@ export default function Home() {
             <li>Coummunity</li>
             <li>Products</li>
             <li>More</li>
-            <li><img ></img></li>
+            <li><img src={logo}></img></li>
+            <li><img src={logo}></img></li>
+            <li><img src={logo}></img></li>
         </ul>
     </nav>
       </div>
